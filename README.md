@@ -39,9 +39,10 @@ Transcript assemblies from the [1000 Plant Transcriptomes Project](https://db.cn
 The same protein data was used as input for all annotation runs. These were the translated CDS from _Medicago trunculata_, _Arachis hypogaea_, and _Glycine max_ genome assemblies, with the longest isoforms selected. The dataset was received from Sara Knaack, who curated it for use in a parallel project. 
 
 ## Results
-[`BUSCO`](https://busco-archive.ezlab.org/v3/) scores of annotated gene models for both `MAKER` and `BRAKER` are listed in the file `sample_annotation_busco.xlsx`. Genomes and annotations have been uploaded to [`CoGe`](https://genomevolution.org/coge/) for browsing. For now they are private, but I can grant access to individuals if you contact me at kasey.pham@ufl.edu.
+[`BUSCO`](https://busco-archive.ezlab.org/v3/) scores of annotated gene models for both `MAKER` and `BRAKER` are listed in the file [`sample_annotation_busco.xlsx`](https://github.com/kaseykhanhpham/nitfix-annotation/blob/main/sample_annotation_busco.xlsx). Genomes and annotations have been uploaded to [`CoGe`](https://genomevolution.org/coge/) for browsing. For now they are private, but I can grant access to individuals if you contact me at kasey.pham@ufl.edu.
 
 ## Pipeline Overview
+More detail on running this pipeline can be found in the [pipline directory README](https://github.com/kaseykhanhpham/nitfix-annotation/tree/main/pipeline).
 
 ### Repeat Library Construction
 This step must be done first, before running `MAKER` or `BRAKER`.
