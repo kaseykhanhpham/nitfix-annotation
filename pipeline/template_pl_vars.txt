@@ -1,0 +1,49 @@
+### VARIABLES FOR MAKER/BRAKER PIPELINE
+## ACCOUNT INFO
+ACCOUNT_NAME = "soltis"
+EMAIL = "kasey.pham@ufl.edu"
+## FILES
+TAXON =
+REF_GENOME =
+BASE_DIR = 
+TRANSCRIPTOME =
+PROTEOMES = "/blue/soltis/kasey.pham/nitfix/ref_seqs/ortho/selected_sequences/medicago_truncatula.faa,/blue/soltis/kasey.pham/nitfix/ref_seqs/ortho/selected_sequences/arachis_hypogaea.faa,/blue/soltis/kasey.pham/nitfix/ref_seqs/ortho/selected_sequences/glycine_max.faa"
+PROTEOMES_AGGR = "/blue/soltis/kasey.pham/nitfix/ref_seqs/ortho/annot_test_protein_set.faa"
+## DIRECTORIES
+PIPELINE_DIR = "/blue/soltis/kasey.pham/nitfix/pipeline_scripts"
+AUGUSTUS_CONFIG = "/blue/soltis/kasey.pham/nitfix/augustus_config"
+BUSCO_DOWNLOADS = "/blue/soltis/kasey.pham/nitfix/busco_downloads"
+## PROGRAMS 
+BBMAP = "bbmap/38.44"
+REPEATMODELER = "repeatmodeler/2.0"
+REPEATMASKER = "repeatmasker/4.0.9"
+INTEL = "intel/2020.0.166"
+OPENMPI = "openmpi/4.0.5"
+MAKER = "maker/3.01.03"
+SNAP = "snap/20100728"
+BEDTOOLS = "bedtools/2.30.0"
+BUSCO = "busco/4.1.4"
+TRNASCAN = "trnascan-se/1.23"
+BEDTOOLS = "bedtools/2.30.0"
+GENEMARK = "genemark_es/4.65"
+PYTHON = "python/3.8"
+PROTHINT = "prothint/2.6.0"
+BRAKER = "braker/2.1.6"
+AUGUSTUS = "augustus/3.4.0"
+PERL = "perl/5.24.1"
+CUFFLINKS = "cufflinks/2.2.1.1"
+## DERIVED VARIABLES
+REF_GENOME_DIR = "/".join(REF_GENOME.split("/")[0:len(REF_GENOME.split("/")) - 1]) # directory where genome file is saved
+REF_GENOME_FILENAME = REF_GENOME.split("/")[len(REF_GENOME.split("/")) - 1] # name of reference genome file
+REF_GENOME_BASE = ".".join(REF_GENOME_FILENAME.split(".")[0:len(REF_GENOME_FILENAME.split(".")) - 1]) # name of reference genome without file extension
+MAKER_VERSION = MAKER.split("/")[1]
+REPEAT_PROTEIN = "/apps/maker/{maker_version}/maker/data/te_proteins.fasta".format(maker_version = MAKER_VERSION)
+REPEAT_GFF = "{base_dir}/repeat_lib/full_mask/{taxon}_repeat_fullmask.out.reformat.gff3".format(base_dir = BASE_DIR, taxon = TAXON)
+BUSCO_VERSION = BUSCO.split("/")[1]
+SNAP_VERSION = SNAP.split("/")[1]
+TRNASCAN_VERSION = TRNASCAN.split("/")[1]
+PROTHINT_VERSION = PROTHINT.split("/")[1]
+AUGUSTUS_VERSION = AUGUSTUS.split("/")[1]
+GENEMARK_VERSION = GENEMARK.split("/")[1]
+BRAKER_VERSION = BRAKER.split("/")[1]
+PYTHON_VERSION = PYTHON.split("/")[1]
