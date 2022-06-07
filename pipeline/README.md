@@ -30,3 +30,10 @@ python braker.py template_pl_vars.txt
 ```
 
 After doing this, you should see a set of subdirectories, `repeat_lib`, `maker`, and `braker`, in the directory specified  in `template_pl_vars.txt`. Jobs in `repeat_lib` must be run first to mask the genome assembly for repeats before annotation, but `maker` and `braker` pipelines can be run in any order or concurrently.
+
+Once finished with intermediate files, they can be cleaned. Do not do this step before finishing running the other steps of the pipeline.
+```
+module load python/3.8
+
+python clean_output.py template_pl_vars.txt
+```
